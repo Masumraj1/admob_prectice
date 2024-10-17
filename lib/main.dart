@@ -6,6 +6,10 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
+  var deviceId = ["296f4308-6401-4ccb-b76b-a6410c65cb88"];
+  RequestConfiguration requestConfiguration =
+  RequestConfiguration(testDeviceIds: deviceId);
+  MobileAds.instance.updateRequestConfiguration(requestConfiguration);
   runApp(const MyApp());
 }
 
